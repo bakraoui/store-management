@@ -1,20 +1,23 @@
 package com.storemanagment.inventoryservice.models;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(value = "inventory")
+@Entity
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
 @Data
 public class Inventory {
     @Id
-    private String id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
     private String skuCode;
     private Integer quantity;
 }

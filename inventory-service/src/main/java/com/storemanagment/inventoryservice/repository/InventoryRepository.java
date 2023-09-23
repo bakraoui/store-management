@@ -1,7 +1,10 @@
 package com.storemanagment.inventoryservice.repository;
 
 import com.storemanagment.inventoryservice.models.Inventory;
-import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface InventoryRepository extends MongoRepository<Inventory, String> {
+import java.util.List;
+
+public interface InventoryRepository extends JpaRepository<Inventory, String> {
+    List<Inventory> findBySkuCodeIn(List<String> skuCode);
 }

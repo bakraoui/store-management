@@ -1,9 +1,9 @@
 package com.storemanagement.orderservice.repository;
 
-import com.storemanagement.orderservice.models.Order;
+import com.storemanagement.orderservice.models.OrderLineItems;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface OrderRepository extends JpaRepository<Order, Long> {
+public interface OrderLineItemsRepository extends JpaRepository<OrderLineItems, Long> {
 }

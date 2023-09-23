@@ -1,6 +1,6 @@
 package com.storemanagement.orderservice.mapper;
 
-import com.storemanagement.orderservice.dtos.OrderLIneItemsRequest;
+import com.storemanagement.orderservice.dtos.OrderLineItemsRequest;
 import com.storemanagement.orderservice.dtos.OrderRequest;
 import com.storemanagement.orderservice.models.Order;
 import com.storemanagement.orderservice.models.OrderLineItems;
@@ -21,7 +21,7 @@ public class OrderMapper {
                 .build();
     }
 
-    public static OrderLineItems mapToOrLineItems(OrderLIneItemsRequest orderLIneItemsRequest) {
+    public static OrderLineItems mapToOrLineItems(OrderLineItemsRequest orderLIneItemsRequest) {
         return OrderLineItems.builder()
                 .price(orderLIneItemsRequest.getPrice())
                 .skuCode(orderLIneItemsRequest.getSkuCode())

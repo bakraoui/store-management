@@ -1,5 +1,4 @@
-package com.storemanagment.inventoryservice.dtos;
-
+package com.storemanagement.orderservice.dtos;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -10,7 +9,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Data
 @Builder
-public class InventoryRequest {
+public class InventoryResponse {
     private String skuCode;
-    private Integer quantity;
+    private boolean inStock;
 }

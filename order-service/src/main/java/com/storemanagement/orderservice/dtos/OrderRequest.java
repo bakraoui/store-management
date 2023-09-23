@@ -13,5 +13,5 @@ import java.util.List;
 @Data
 @Builder
 public class OrderRequest {
-    private List<OrderLIneItemsRequest> orderLineItems = new ArrayList<OrderLIneItemsRequest>();
+    private List<OrderLineItemsRequest> orderLineItems = new ArrayList<>();
 }
